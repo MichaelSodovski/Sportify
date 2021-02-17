@@ -1,0 +1,26 @@
+div {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: white;
+}
+div, div > * {
+    border: 0.01px lightgrey solid;
+    border-bottom: none;
+}
+header {
+    grid-column: span 12;
+    background-color: #6AFB92;
+    
+}
+main {
+    grid-column: span 10;
+    height: 100%;
+}
+aside {
+    grid-column: span 2;
+    background-color: #F7FFF7;
+    height: 100%;
+    
+}

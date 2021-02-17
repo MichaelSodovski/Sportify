@@ -1,0 +1,240 @@
+#productsMain {
+    width: 100%;
+    height: 669px;
+}
+
+td {
+    width: 10%;
+}
+
+.example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+    
+}
+
+.flex-tr {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    height: 50px;
+    color: rgba(27, 27, 27, 0.614);
+    font-size: medium;
+    border: solid 0.5px rgb(210, 210, 210);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.flex-tr > * {
+    margin-top: 10px;
+}
+
+#tableImageTD {
+    position: relative;
+    right: 100px;
+    width: 85px;
+    height: 50px;
+    left: 2px;
+}
+
+#tableProductNameTD {
+    width: 120px;
+    height: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    left: 330px;
+}
+
+#tableCaloriesTD {
+    position: relative;
+    width: 110px;
+    height: 50px;
+    left: 390px;
+}
+
+#tableProteinTD {
+    position: relative;
+    width: 110px;
+    height: 50px;
+    left: 455px;
+}
+
+#tableCarbohydrateTD {
+    position: relative;
+    width: 110px;
+    height: 50px;
+    left: 523px;
+}
+
+#tableFatTD {
+    position: relative;
+    width: 110px;
+    height: 50px;
+    left: 593px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.s003 {
+    position: relative;
+    min-height: -30vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    padding: 10px;
+    width: 504px;
+    left: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.s003 form {
+    width: 100%;
+    max-width: 790px;
+    margin-bottom: 0;
+}
+
+.s003 form .inner-form {
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.s003 form .inner-form .input-field {
+    height: 58px;
+}
+
+.s003 form .inner-form .input-field input {
+    height: 100%;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 32px;
+    font-size: 16px;
+    color: #555;
+}
+
+.s003 form .inner-form .input-field input.placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+.s003 form .inner-form .input-field input:-moz-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+.s003 form .inner-form .input-field input::-webkit-input-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+.s003 form .inner-form .input-field input:hover, .s003 form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: #fff;
+}
+
+.s003 form .inner-form .input-field.first-wrap {
+    width: 200px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.s003 form .inner-form .input-field.second-wrap {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.s003 form .inner-form .input-field.third-wrap {
+    width: 74px;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    color: black;
+    border: 0;
+    cursor: pointer;
+    background: #6AFB92;
+    transition: all .2s ease-out, color .2s ease-out;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search svg {
+    width: 16px;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search:hover {
+    background: rgb(221, 255, 221);
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 992px) {
+    .s003 form .inner-form .input-field {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .s003 form .inner-form {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .s003 form .inner-form .input-field {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .s003 form .inner-form .input-field input {
+        padding: 10px 15px;
+    }
+    .s003 form .inner-form .input-field.first-wrap {
+        width: 100%;
+        border-right: 0;
+    }
+    .s003 form .inner-form .input-field.first-wrap .choices__inner {
+        padding: 10px 15px;
+    }
+    .s003 form .inner-form .input-field.first-wrap .choices[data-type*="select-one"]:after {
+        right: 11.5px;
+        border-color: #e5e5e5 transparent transparent transparent;
+    }
+    .s003 form .inner-form .input-field.second-wrap {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .s003 form .inner-form .input-field.second-wrap input {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .s003 form .inner-form .input-field.third-wrap {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}

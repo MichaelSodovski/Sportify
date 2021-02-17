@@ -1,0 +1,37 @@
+h3 {
+    margin: 0 0 10px;
+    white-space: nowrap;
+    position: relative;
+    left: 100px;
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.calendarMainPositioning {
+    width: 80%;
+}
+
+.calendarBtnMain {
+    position: relative;
+    left: 260px;
+}
+
+.calendarMainSize {
+    height: 669px;
+}
+
+#editEvents {
+    display: inline-block;
+    position: absolute;
+    left: 750px;
+}
+
+#addNewBtn {
+    position: relative;
+    right: 10px;
+    width: 100px;
+    height: 45px;
+}
