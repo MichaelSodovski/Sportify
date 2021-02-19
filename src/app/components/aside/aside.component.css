@@ -4,20 +4,27 @@
     background-color: rgb(243, 242, 242);
     color: rgba(145, 145, 145, 0.614);
     font-weight: 350;
-    text-shadow: 0.5px 0.5px 0.5px rgba(27, 27, 27, 0.614);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
     transition-duration: 0.4s;
+    text-shadow: 1px 1px 1px black, 0 0 5px #d0e0d5, 0 0 5px rgb(119, 119, 181);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(rgb(243, 242, 242) 15%, rgb(233, 233, 233) 65%, rgb(217, 217, 217) 90%);
+    outline: 0;
 }
 
 .navBtn:hover {
     background-color: #6AFB92;
     color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(#96fabe 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
 }
 
 .navBtn:focus {
     background-color: #6AFB92;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(#6ac18d 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
 }
 
 .navBtn span {

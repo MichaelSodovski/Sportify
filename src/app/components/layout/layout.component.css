@@ -11,7 +11,7 @@ div, div > * {
 }
 header {
     grid-column: span 12;
-    background-color: #6AFB92;
+    background-image: radial-gradient(#55db7b 10%, #68f690 30%, #6AFB92);
     
 }
 main {

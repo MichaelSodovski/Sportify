@@ -4,7 +4,7 @@
             <div class="inner-form">
                 <div class="input-field second-wrap">
                     <input id="search" type="text" placeholder="Enter Product Name..."
-                        (change)="onTextChange($event)"/>
+                        (change)="onTextChange($event)" />
                 </div>
                 <div class="input-field third-wrap">
                     <button class="btn-search" type="button">
@@ -45,7 +45,7 @@
                 <mat-panel-title>
                     <td> </td>
                 </mat-panel-title>
-                <mat-panel-description>
+                <mat-panel-description (click)="getProductID(p.productId)">
                     <td> {{p.productName| titlecase }} </td>
                     <td> {{p.calories | number:''}} </td>
                     <td> {{p.protein | number:''}} </td>
@@ -55,8 +55,8 @@
             </mat-expansion-panel-header>
             <mat-form-field>
                 <mat-label style="color:#35844b;"> Amount\ 100 gr </mat-label>
-                <input matInput type="number" min="1" > 
+                <input matInput type="number" min="1" (change)="addProductToTotal($event)">
             </mat-form-field>
-            <button mat-button style="color:#35844b" (click)="addProductToTotal()"> Add </button>
+            <button mat-button style="color:#35844b" (click)="convertToProductsArray(p.productId)" (click)="addItemToHistory(p.productName, p.calories, p.protein, p.carbohydrate, p.fat)"> Add </button>
         </mat-expansion-panel>
     </mat-accordion>

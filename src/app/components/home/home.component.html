@@ -3,34 +3,37 @@
         <div id="summaryStatsTable">
             <table>
                 <tr>
-                    <th> Sum </th>
                     <th> Calories </th>
                     <th> Proteins </th>
-                    <th> Carbohydrates </th>
+                    <th> Carbs </th>
                     <th> Fats </th>
-                    <th> Saturated fats </th>
                 </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                <tr class="TotalTr">
+                    <td class="TotalTrStart"> {{ totalCalories }} </td>
+                    <td class="TotalTrMiddle"> {{ totalProtein }} </td>
+                    <td class="TotalTrMiddle"> {{ totalCarbohydrates }} </td>
+                    <td class="TotalTrEnd"> {{ totalFat }} </td>
                 </tr>
             </table>
         </div>
         <div id="summaryOfDailyProducts">
-            <table>
-                <tr>
-                    <th> Product Name </th>
-                    <th> Amount </th>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-            </table>
+            <tr id="smallTableTr">
+                <th> Product Name </th>
+                <th> Amount (gr) </th>
+            </tr>
+            <mat-accordion class="example-headers-align" *ngFor="let p of selectedProducts">
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-description>
+                            <div id="dividerStart"></div>
+                            <td> {{p.productName}} </td>
+                            <div id="dividerEnd"></div>
+                            <td> {{p.amount}} </td>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <button mat-button style="color:#35844b" (click)="ItemDelete(p.id)"> Delete </button>
+                </mat-expansion-panel>
+            </mat-accordion>
         </div>
     </div>
 </div>
