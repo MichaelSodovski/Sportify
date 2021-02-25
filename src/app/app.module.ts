@@ -54,6 +54,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserComponent } from './components/user/user.component';
+import { RegisterComponent } from './components/register/register.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 @NgModule({
     declarations: [
@@ -64,6 +67,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         HomeComponent,
         ProductsComponent,
         CalendarComponent,
+        UserComponent,
+        RegisterComponent,
+        SignInComponent,
     ],
     imports: [
         BrowserModule,

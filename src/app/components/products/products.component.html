@@ -54,9 +54,30 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <mat-form-field>
-                <mat-label style="color:#35844b;"> Amount\ 100 gr </mat-label>
-                <input matInput type="number" min="1" (change)="addProductToTotal($event)">
+                <mat-label style="color:#35844b;" class="add"> Amount\ 100 gr </mat-label>
+                <input matInput type="number" min="1" class="add" (change)="addProductToTotal($event)">
             </mat-form-field>
-            <button mat-button style="color:#35844b" (click)="convertToProductsArray(p.productId)" (click)="addItemToHistory(p.productName, p.calories, p.protein, p.carbohydrate, p.fat)"> Add </button>
+            <button mat-button style="color:#35844b" class="add" (click)="convertToProductsArray(p.productId)"
+                (click)="addItemToHistory(p.productName, p.calories, p.protein, p.carbohydrate, p.fat)"> Add </button>
+                <button mat-button style="color:red" (click)="ItemDelete(p.productId)" id="deleteBTN"> Delete </button>
         </mat-expansion-panel>
     </mat-accordion>
+
+    <div class="sidenav">
+        <div class="sideNav-InnerLayer">
+            <br>
+            <input placeholder=" ·Product Name" name="productName" class="Inputs" [(ngModel)]="product.ProductName">
+            <br><br>
+            <input placeholder=" ·Calories" name="Calories" class="Inputs" [(ngModel)]="product.calories">
+            <br><br>
+            <input placeholder=" ·Protein" name="Protein" class="Inputs" [(ngModel)]="product.protein">
+            <br><br>
+            <input placeholder=" ·Carbohydrate" name="Carbohydrate" class="Inputs" [(ngModel)]="product.Carbohydrate">
+            <br><br>
+            <input placeholder=" ·Fat" name="Fat" class="Inputs" [(ngModel)]="product.Fat">
+            <br><br>
+            <button type="button" class="navBtn shadow-none" (click)="AddProductToDb(product)"> <span> Add</span> </button>
+        </div> 
+    </div>
+</div>
+    

@@ -1,0 +1,269 @@
+<div class="CoverGymImg">
+    <div class="cover">
+        <form class="SignUpForm" #AddUserForm="ngForm">
+            <h3> First Step: Fill in your details </h3>
+            <label id="userLBLfont" class="LBLFirstName-positioning"> First Name: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input id="inputFirstName" type="text" [(ngModel)]="user.firstName"
+                        class="form-control is-invalid is-valid Inputs" name="firstName" required pattern="[a-zA-Z]+"
+                        #firstNameInfo="ngModel" placeholder="User First Name..." maxlength="50" minlength="2"
+                        [ngClass]="{'is-invalid': firstNameInfo.errors && firstNameInfo.touched, 'is-valid': firstNameInfo.valid}">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-firstName-Required"
+                        [hidden]="!firstNameInfo.errors?.required">
+                        First Name Required
+                    </div>
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-firstName-Letters-only"
+                        [hidden]="!firstNameInfo.errors?.pattern">
+                        Letters only
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-firstName-Must-be-at-least-2-characters"
+                        [hidden]="!firstNameInfo.errors?.minlength">
+                        Must be at least 2 characters
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-firstName"
+                        [hidden]="firstNameInfo.invalid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+
+            <label id="userLBLfont" class="LBLlastName-positioning"> Last Name: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input id="inputLastName" type="text" placeholder="User Last Name..." name="lastName"
+                        [(ngModel)]="user.lastName"
+                        [ngClass]="{'is-invalid':lastNameInfo.errors && lastNameInfo.touched, 'is-valid': lastNameInfo.valid}"
+                        required #lastNameInfo="ngModel" class="form-control is-invalid is-valid Inputs"
+                        pattern="[a-zA-Z]+" minlength="2" maxlength="50">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-lastName-Required"
+                        [hidden]="!lastNameInfo.errors?.required">
+                        Last Name Required
+                    </div>
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-lastName-Letters-only"
+                        [hidden]="!lastNameInfo.errors?.pattern">
+                        Letters only
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-lastName-Must-be-at-least-2-characters"
+                        [hidden]="!lastNameInfo.errors?.minlength">
+                        Must be at least 2 characters
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-lastName"
+                        [hidden]="lastNameInfo.invalid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+
+            <label id="userLBLfont" class="LBLId-positioning"> Identification Number: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input id="inputUserID" type="text" placeholder="ID of User..." name="id"
+                        [(ngModel)]="user.identificationNumber"
+                        [ngClass]="{'is-invalid':idInfo.errors && idInfo.touched, 'is-valid': idInfo.valid}" required
+                        #idInfo="ngModel" class="form-control is-invalid is-valid Inputs" minlength="9" maxlength="9"
+                        pattern="[0-9]+">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-userId-ID-of-User-Required"
+                        [hidden]="!idInfo.errors?.required">
+                        ID of User Required
+                    </div>
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-userId-Must-be-9-characters"
+                        [hidden]="!idInfo.errors?.minlength">
+                        Must be 9 characters
+                    </div>
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-userId-numbers-only"
+                        [hidden]="!idInfo.errors?.pattern">
+                        Numbers only
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-userId" [hidden]="idInfo.invalid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+
+            <label id="userLBLfont" class="LBLuserName-positioning"> User Name: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input id="inputUserName" type="text" placeholder="User Name..." name="userName"
+                        [(ngModel)]="user.userName" #userNameInfo="ngModel"
+                        class="form-control is-invalid is-valid Inputs"
+                        [ngClass]="{'is-invalid':userNameInfo.errors && userNameInfo.touched, 'is-valid': userNameInfo.valid}"
+                        required minlength="8" maxlength="16" pattern="[A-Za-z0-9]+">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-userName-User-Name-Required"
+                        [hidden]="!userNameInfo.errors?.required">
+                        User Name Required
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-userName-userName-Must-be-minimum-of-8-characters"
+                        [hidden]="!userNameInfo.errors?.minlength">
+                        Must be minimum of 8 characters
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-userName-letters-and-numbers-only"
+                        [hidden]="!userNameInfo.errors?.pattern">
+                        letters and numbers only
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-userName"
+                        [hidden]="!userNameInfo.valid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-LBL-gender-dateOfBirth">
+                <label id="userLBLfont" class="LBLdateOfBirth-positioning"> Date of birth: </label>
+                <label id="userLBLfont" class="LBLgender-positioning"> Gender: </label>
+            </div>
+            <div class="spacerDiv">
+                <div class="inputsdobandgenderDiv">
+                    <div class="inputsDateOfBirthDiv">
+                        <div class="form-group">
+                            <input id="inputDateOfBirth" type="date" name="dateOfBirth" [(ngModel)]="user.dateOfBirth"
+                                [ngClass]="{'is-invalid':DateOfBirthInfo.errors && DateOfBirthInfo.touched, 'is-valid': DateOfBirthInfo.valid}"
+                                required #DateOfBirthInfo="ngModel" class="form-control is-invalid is-valid Inputs">
+                            <div class="invalid-feedback validation-font" id="invalid-feedback-date-of-birth"
+                                [hidden]="!DateOfBirthInfo.errors?.required">
+                                Date of birth Required
+                            </div>
+                            <div class="valid-feedback validation-font" id="valid-feedback-date-of-birth"
+                                [hidden]="DateOfBirthInfo.invalid">
+                                Okay!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputsGenderDiv">
+                        <div class="form-group">
+                            <select id="inputGender" name="gender" class="form-control is-invalid is-valid Inputs"
+                                required [(ngModel)]="user.gender" #genderInfo=ngModel
+                                [ngClass]="{'is-invalid':genderInfo.errors && genderInfo.touched ,'is-valid': genderInfo.valid}">
+                                <option value="" disabled selected> Choose an option </option>
+                                <option value="1"> Male </option>
+                                <option value="2"> Female </option>
+                            </select>
+                            <div class="invalid-feedback validation-font" id="invalid-feedback-gender"
+                                [hidden]="!genderInfo.errors?.required">
+                                Please choose an option
+                            </div>
+                            <div class="valid-feedback validation-font" id="valid-feedback-gender"
+                                [hidden]="!genderInfo.valid">
+                                Okay!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <label id="userLBLfont" class="LBLemail-positioning"> Email: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email..." name="email" [(ngModel)]="user.email" required
+                        #emailInfo="ngModel" class="form-control is-invalid is-valid Inputs"
+                        [ngClass]="{'is-invalid':emailInfo.errors && emailInfo.touched,'is-valid': emailInfo.valid}"
+                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-email-Required"
+                        [hidden]="!emailInfo.errors?.required">
+                        Email Required
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-email-must-be-in-the-correct-format" [hidden]="!emailInfo.errors?.pattern">
+                        Email must be in the correct format
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-email" [hidden]="!emailInfo.valid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+
+            <label id="userLBLfont" class="LBLpassWord-positioning"> Password: </label>
+            <div class="spacerDiv">
+                <div class="form-group">
+                    <input type="password" placeholder="Choose a password..." name="Password"
+                        [(ngModel)]="user.passWord" required pattern="[A-Za-z0-9]+" minlength="8" maxlength="16"
+                        #PasswordInfo="ngModel" class="form-control is-invalid is-valid Inputs"
+                        [ngClass]="{'is-invalid':PasswordInfo.errors && PasswordInfo.touched , 'is-valid': PasswordInfo.valid}">
+                    <div class="invalid-feedback validation-font" id="invalid-feedback-passWord-required"
+                        [hidden]="!PasswordInfo.errors?.required">
+                        Password required
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-passWord-Letters-and-numbers-only"
+                        [hidden]="!PasswordInfo.errors?.pattern">
+                        Letters and numbers only
+                    </div>
+                    <div class="invalid-feedback validation-font"
+                        id="invalid-feedback-passWord-Must-be-at-least-8-characters"
+                        [hidden]="!PasswordInfo.errors?.minlength">
+                        Must be at least 8 characters
+                    </div>
+                    <div class="valid-feedback validation-font" id="valid-feedback-passWord"
+                        [hidden]="!PasswordInfo.valid">
+                        Okay!
+                    </div>
+                </div>
+            </div>
+            <div class="imgPreviewDiv">
+                <img src="{{preview}}">
+                <input required type="file" accept="image/*" #imageBox name="image" id="avatarinput"
+                    [(ngModel)]="user.image" #imageBoxInfo="ngModel" (change)="DisplayPreview($event)"
+                    class="form-control is-invalid is-valid Inputs"
+                    [ngClass]="{'is-invalid':imageBoxInfo.errors && imageBoxInfo.touched , 'is-valid': imageBoxInfo.valid}">
+                <button pButton pRipple type="button" class="p-button-raised navBtn" id="avatarInputBTN"
+                    (click)="imageBox.click()"><span>Profile Picture</span></button>
+            </div>
+            <button pButton pRipple type="button" label="Submit"
+                class="p-button-raised navBtn calculateBtn"><span>Proceed to Second Step</span></button>
+            <div class="details-next-stage">
+                <h3 class="BMIcalculatorH3"> Second Step: Calculate your BMI & BMR </h3>
+                <hr>
+                <div class="bmi-flex">
+                    <div class="bmiCalculator">
+                        <h6>BMI & BMR Calculator</h6>
+                        <mat-form-field class="add">
+                            <mat-label style="color:#35844b;" class="add"> Weight (kg) </mat-label>
+                            <input matInput type="number" min="1" class="add">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="add">
+                            <mat-label style="color:#35844b;" class="add"> Height (cm) </mat-label>
+                            <input matInput type="number" min="1" class="add">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="add">
+                            <mat-label style="color:#35844b;" class="add"> Age (Years) </mat-label>
+                            <input matInput type="number" min="1" class="add">
+                        </mat-form-field>
+                        <br>
+                        <button pButton pRipple type="button" label="Submit"
+                            class="p-button-raised navBtn calculateBtn stepTwoBtn" ><span>Proceed to the final step</span></button>
+                    </div>
+                    <div class="bmiRanges">
+                        <h6>BMI weight ranges</h6>
+                        <br>
+                        <p>Less than 18.5 = Underweight</p>
+                        <p>Between 18.5 - 24.9 = Healthy Weight</p>
+                        <p>Between 25 - 29.9 = Overweight</p>
+                        <p>Over 30 = Obese</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bmrCalculator">
+                <h3 class="BMIcalculatorH3"> Final step: view results and finish registration </h3>
+                <div class="bmrCalculator-innerLayer">
+                    <div class="flex-BmiNbmR-results">
+                        <div class="BmiResults">
+                            <h3 class="bmiH3">BMI: </h3>
+                        </div>
+                        <div class="BmrResults">
+                            <h3 class="bmrH3">BMR: </h3>
+                        </div>
+                    </div>
+                    <button pButton pRipple type="button" label="Submit" class="p-button-raised navBtn calculateBtn"
+                        [disabled]="AddUserForm.form.invalid" (click)="Register()"><span>Finish
+                            Registration</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

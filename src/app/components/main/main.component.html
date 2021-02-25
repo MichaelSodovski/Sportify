@@ -1,1 +1,39 @@
-<p>main works!</p>
+<div id="homeMain">
+    <div id="flex-container-wrap">
+        <div id="summaryStatsTable">
+            <table>
+                <tr>
+                    <th> Calories </th>
+                    <th> Proteins </th>
+                    <th> Carbs </th>
+                    <th> Fats </th>
+                </tr>
+                <tr class="TotalTr">
+                    <td class="TotalTrStart"> {{ totalCalories }} </td>
+                    <td class="TotalTrMiddle"> {{ totalProtein }} </td>
+                    <td class="TotalTrMiddle"> {{ totalCarbohydrates }} </td>
+                    <td class="TotalTrEnd"> {{ totalFat }} </td>
+                </tr>
+            </table>
+        </div>
+        <div id="summaryOfDailyProducts">
+            <tr id="smallTableTr">
+                <th> Product Name </th>
+                <th> Amount (gr) </th>
+            </tr>
+            <mat-accordion class="example-headers-align" *ngFor="let p of selectedProducts">
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-description>
+                            <div id="dividerStart"></div>
+                            <td> {{p.productName}} </td>
+                            <div id="dividerEnd"></div>
+                            <td> {{p.amount}} </td>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <button mat-button style="color:red" class="deleteBtn" (click)="ItemDelete(p.id)"> Delete </button>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>

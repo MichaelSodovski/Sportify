@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
         this.localProducts = this.original;
     }
 
-    public addItemToHistory(productName: string, calories:number, protein: number, carbohydrate: number, fat: number) {
+    public addItemToHistory(productName: string, calories: number, protein: number, carbohydrate: number, fat: number) {
         var item: HistoryModel = {
             productId: this.productId,
             productName: productName,
@@ -39,9 +39,21 @@ export class ProductsComponent implements OnInit {
         }
         try {
             this.productService.AddItemToHistory(item);
-            this.MatNotificationService.open("Item added successfully.."); 
+            this.MatNotificationService.open("Item added successfully..");
         }
-        catch(err) {
+        catch (err) {
+            alert(err.message);
+        }
+    }
+    public AddProductToDb(product: productsModel) {
+        try {
+            this.productService.AddProductToDB(product);
+            this.MatNotificationService.open("Item added successfully..");
+            setTimeout(() => {
+                location.reload()
+            }, 500);
+        }
+        catch (err) {
             alert(err.message);
         }
     }
@@ -65,6 +77,17 @@ export class ProductsComponent implements OnInit {
         this.localProducts = this.original.filter(p => p.ProductName === event.target.value);
         if (event.target.value == "") {
             this.localProducts = this.original;
+        }
+    }
+
+    public ItemDelete(id: number) {
+        try {
+            this.productService.DeleteItemByIntegerId(id);
+            this.MatNotificationService.open("Item deleted successfully..");
+            location.reload();
+        }
+        catch (err) {
+            alert(err.message);
         }
     }
 }

@@ -5,4 +5,91 @@ h2 {
     text-shadow: 1px 1px 2px black;
     background-image: radial-gradient(#55db7b 30%, #68f690 70%, #6AFB92);
     text-shadow: 1px 1px 2px black, 0 0 25px #6AFB92, 0 0 5px rgb(119, 119, 181);
+    z-index: 1;
+    
+}
+/* Responsive register Menu:
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.sidenav {
+    position: absolute;
+    right: -380px;
+    transition: 0.3s;
+    width: 400px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px 0px 0px 5px;
+    white-space: nowrap;
+    bottom: 10px;
+    background-color: rgb(233, 233, 233);
+    border: solid 0.5px rgb(210, 210, 210);
+    top: 0px;
+    padding: 10px;
+    opacity: 0.9;
+    height: 50px;
+    z-index: 2;
+}
+.sidenav:hover {
+    right: 0px;
+}
+.sideNav-InnerLayer {
+    position: relative;
+    left: 20px;
+    width: 150px;
+    height: 50px;
+    border: rgb(192, 192, 192) solid 1px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #fff;
+}
+/* Side Menu: 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.navBtn {
+    position: relative;
+    bottom: 12px;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(245, 245, 245);
+    color: rgba(145, 145, 145, 0.614);
+    transition-duration: 0.4s;
+    text-shadow: 1px 1px 1px black, 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+    border-radius: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    outline: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border:rgb(192, 192, 192) 0.5px solid;
+}
+.navBtn:hover {
+    background-color: #6AFB92;
+    color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    background-image: radial-gradient(#96fabe 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+.navBtn:focus {
+    background-color: #6AFB92;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(#6ac18d 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+.navBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.navBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.navBtn:hover span {
+    padding-right: 25px;
+}
+.navBtn:hover span:after {
+    opacity: 1;
+    right: 0;
 }

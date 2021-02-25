@@ -2,6 +2,8 @@
 
 html, body {
     height: 100%;
+    max-width: 1580px;
+    overflow-x: hidden;
     margin: 0; 
     padding: 0;
     text-align: center;

@@ -1,5 +1,9 @@
 export enum actionType {
     GetAllProducts,
     AddItemToHistory,
-    GotError
+    AddItemToDB,
+    GotError,
+    Register,
+    login,
+    LogOut
 }

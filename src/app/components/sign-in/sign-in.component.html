@@ -1,0 +1,17 @@
+<form class="usertSignInForm" #loginForm="ngForm">
+    <h3> Fill in your details </h3>
+    <hr>
+            <input type="text" name="userName" placeholder="User Name..." #userNameInfo="ngModel"
+                [(ngModel)]="credentials.userName" required minlength="8" maxlength="16" pattern="[A-Za-z0-9]+" class="Inputs">
+                <br><br>
+            <input type="password" name="passWord" placeholder="Password..." #PasswordInfo="ngModel"
+                [(ngModel)]="credentials.passWord" required pattern="[A-Za-z0-9]+" minlength="8" maxlength="16" class="Inputs">
+                <br><br>
+    <button class="navBtn" type="button" (click)="Login()">Sign In</button>
+    <br>
+    <a> Forgot your password? </a>
+    <hr>
+    <p>Don't have an account yet? tap here to create one! </p>
+    <br>
+    <button class="navBtn" type="button" routerLink="/signUp" routerLinkActive="active"> Sign Up </button>
+</form>

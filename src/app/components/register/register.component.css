@@ -1,0 +1,575 @@
+.CoverGymImg {
+    width: 100%;
+    height: 670px;
+    background-image: url(../../../assets/Screenshot_20210221-153348_Facebook.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cover {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 670px;
+    background-color: #EAEAEA;
+    box-shadow: 5px 5px;
+    opacity: 0.94;
+}
+
+.SignUpForm {
+    position: absolute;
+    border: rgb(168, 166, 166) solid 1px;
+    width: 600px;
+    height: 670px;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+}
+
+.form-group {
+    border-radius: 5px;
+    width: 95%;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 15px;
+}
+
+#inputFirstName, #inputLastName {
+    width: 67%;
+}
+
+#inputUserName {
+    width: 100%;
+}
+
+#inputUserID {
+    width: 100%;
+}
+
+::placeholder {
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+input:focus {
+    border-color: #000;
+}
+
+.form-group>input, select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+}
+
+.inputsdobandgenderDiv {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputsDateOfBirthDiv {
+    width: 50%;
+}
+
+.inputsGenderDiv {
+    width: 47.5%;
+}
+
+#invalid-feedback-date-of-birth {
+    position: relative;
+    width: 130px;
+    left: 140px;
+    white-space: nowrap;
+}
+
+#valid-feedback-date-of-birth {
+    position: relative;
+    width: 35px;
+    left: 236.5px;
+}
+
+#invalid-feedback-gender {
+    position: relative;
+    width: 150px;
+    left: 110px;
+    white-space: nowrap;
+}
+
+#valid-feedback-gender {
+    position: relative;
+    width: 35px;
+    left: 217px;
+}
+
+#inputGender, #inputDateOfBirth {
+    height: 36px;
+    width: 100%;
+}
+
+#avatarInputBTN {
+    position: relative;
+    top: 83.5%;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    width: 153px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+#avatarinput {
+    display: none;
+}
+
+#avatarLbL {
+    display: none;
+}
+
+.imgPreviewDiv {
+    position: absolute;
+    left: 70%;
+    bottom: 66%;
+    width: 152px;
+    height: 180px;
+}
+
+img {
+    position: absolute;
+    width: 152px;
+    height: 150px;
+    background-image: url(../../../assets/images.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#inputRole {
+    display: none;
+}
+
+.spacerDiv {
+    height: 45px;
+}
+
+.flex-LBL-gender-dateOfBirth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#orderLBLfont, #userLBLfont {
+    color: black;
+    font-size: 12px;
+}
+
+.LBLFirstName-positioning {
+    position: relative;
+    right: 255px;
+}
+
+.LBLlastName-positioning {
+    position: relative;
+    right: 255px;
+}
+
+.LBLId-positioning {
+    position: relative;
+    right: 223px;
+}
+
+.LBLuserName-positioning {
+    position: relative;
+    right: 252px;
+}
+
+.LBLdateOfBirth-positioning {
+    position: relative;
+    right: 105px;
+}
+
+.LBLgender-positioning {
+    position: relative;
+    right: 120px;
+}
+
+.LBLemail-positioning {
+    position: relative;
+    right: 267px;
+}
+
+.LBLpassWord-positioning {
+    position: relative;
+    right: 257px;
+}
+
+/* Validation:
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#invalid-feedback-firstName-Required, #invalid-feedback-lastName-Required {
+    position: relative;
+    left: 250px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-firstName-Letters-only, #invalid-feedback-lastName-Letters-only {
+    position: relative;
+    left: 280px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-firstName-Must-be-at-least-2-characters, #invalid-feedback-lastName-Must-be-at-least-2-characters {
+    position: relative;
+    left: 230px;
+    white-space: nowrap;
+}
+
+#valid-feedback-firstName {
+    position: relative;
+    left: 330px;
+}
+
+#invalid-feedback-lastName {
+    position: relative;
+    left: 250px;
+    white-space: nowrap;
+}
+
+#valid-feedback-lastName {
+    position: relative;
+    left: 330px;
+}
+
+#invalid-feedback-userId-ID-of-User-Required {
+    position: relative;
+    left: 435px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userId-Must-be-9-characters {
+    position: relative;
+    left: 425px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userId-numbers-only {
+    position: relative;
+    left: 440px;
+    white-space: nowrap;
+}
+
+#valid-feedback-userId {
+    position: relative;
+    left: 515px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userName-User-Name-Required {
+    position: relative;
+    left: 430px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userName-userName-Must-be-minimum-of-8-characters {
+    position: relative;
+    left: 370px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userName-letters-and-numbers-only {
+    position: relative;
+    left: 415px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-userName {
+    position: relative;
+    left: 350px;
+    white-space: nowrap;
+}
+
+#valid-feedback-userName {
+    position: relative;
+    left: 515px;
+}
+
+#invalid-feedback-email-Required {
+    position: relative;
+    left: 430px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-email-must-be-in-the-correct-format {
+    position: relative;
+    left: 370px;
+    white-space: nowrap;
+}
+
+#valid-feedback-email {
+    position: relative;
+    left: 515px;
+}
+
+#invalid-feedback-passWord-required {
+    position: relative;
+    left: 430px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-passWord-Letters-and-numbers-only {
+    position: relative;
+    left: 415px;
+    white-space: nowrap;
+}
+
+#invalid-feedback-passWord-Must-be-at-least-8-characters {
+    position: relative;
+    left: 400px;
+    white-space: nowrap;
+}
+
+#valid-feedback-passWord {
+    position: relative;
+    left: 515px;
+}
+
+.invalid-feedback {
+    width: 130px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.valid-feedback {
+    width: 30px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+h3, label {
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+.validation-font {
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+/* inputs
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.Inputs {
+    color: rgba(0, 0, 0, 0.614);
+    border-radius: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    outline: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border: rgb(192, 192, 192);
+    height: 30px;
+}
+
+/* btn:
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.navBtn {
+    position: relative;
+    bottom: 12px;
+    width: 30%;
+    height: 30px;
+    background-color: rgb(245, 245, 245);
+    color: rgba(145, 145, 145, 0.614);
+    transition-duration: 0.4s;
+    text-shadow: 1px 1px 1px black, 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+    border-radius: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    outline: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border: rgb(192, 192, 192);
+    white-space: nowrap;
+}
+
+.navBtn:hover {
+    background-color: #6AFB92;
+    color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    background-image: radial-gradient(#96fabe 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+
+.navBtn:focus {
+    background-color: #6AFB92;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(#6ac18d 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+
+.navBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.navBtn:hover span {
+    padding-right: 25px;
+}
+
+.navBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.p-button-raised {
+    position: relative;
+    top: 10px;
+}
+
+/* BMI Calculator:
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.details-next-stage {
+    position: absolute;
+    top: 0;
+    left: 600px;
+    border: rgb(168, 166, 166) solid 1px;
+    width: 675px;
+    border-radius: 10px;
+    background-color: #b0afaf;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.BMIcalculatorH3 {
+    position: relative;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+.bmiRanges {
+    position: relative;
+    bottom: 17px;
+    width: 50%;
+    border-radius: 0px 0px 10px 0px;
+    border: 1px rgb(169, 169, 169) solid;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+    background-color: #EAEAEA;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    height: 250px;
+}
+
+.bmiRanges, p>* {
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+.add {
+    position: relative;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    text-shadow: 0px 1px 0px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+.bmiCalculator {
+    position: relative;
+    bottom: 17px;
+    width: 50%;
+    border-radius: 0px 0px 0px 10px;
+    border: 1px rgb(169, 169, 169) solid;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 15.5px;
+    text-shadow: 1px 1px 1px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+    background-color: #EAEAEA;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.bmi-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.bmrCalculator {
+    position: absolute;
+    top: 330px;
+    left: 600px;
+    border: rgb(166, 164, 164) solid 1px;
+    width: 675px;
+    height: 336px;
+    border-radius: 10px;
+    background-color: #b0afaf;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.bmrCalculator-innerLayer {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 270px;
+    border: rgb(166, 164, 164) solid 1px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #EAEAEA;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.flex-BmiNbmR-results {
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+}
+.BmiResults {
+    height: 200px;
+    width: 50%;
+    border: rgb(166, 164, 164) solid 1px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #EAEAEA;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.BmrResults {
+    height: 200px;
+    width: 50%;
+    border: rgb(166, 164, 164) solid 1px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #686868;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.stepTwoBtn {
+    width: 200px;
+}
+.bmiH3, .bmrH3 {
+    position: relative;
+    top: 75px;
+    right: 70px;
+}

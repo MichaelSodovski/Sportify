@@ -80,6 +80,110 @@ td {
     left: 593px;
 }
 
+/* Responsive Add Item Menu:
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.sidenav {
+    position: absolute;
+    right: -130px;
+    transition: 0.3s;
+    width: 300px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px 0px 0px 5px;
+    white-space: nowrap;
+    bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    border: solid 0.5px rgb(210, 210, 210);
+    bottom: 180px;
+    padding: 10px;
+    opacity: 0.9;
+}
+.sidenav:hover {
+    right: 100px;
+}
+.sideNav-InnerLayer {
+    position: relative;
+    left: 20px;
+    width: 300px;
+    height: 400px;
+    border: rgb(192, 192, 192) solid 1px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #fff;
+}
+.sidenav, input > * {
+    padding-top: 10px;
+    width: 150px;
+}
+
+/* Side Menu: 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.navBtn {
+    position: relative;
+    bottom: 12px;
+    width: 60%;
+    height: 30px;
+    background-color: rgb(245, 245, 245);
+    color: rgba(145, 145, 145, 0.614);
+    transition-duration: 0.4s;
+    text-shadow: 1px 1px 1px black, 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+    border-radius: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    outline: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border:rgb(192, 192, 192);
+}
+.navBtn:hover {
+    background-color: #6AFB92;
+    color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    background-image: radial-gradient(#96fabe 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+.navBtn:focus {
+    background-color: #6AFB92;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-image: radial-gradient(#6ac18d 20%, #68f690 65%, #6AFB92 90%);
+    outline: 0;
+}
+.navBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.navBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.navBtn:hover span {
+    padding-right: 25px;
+}
+.navBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* inputs
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.Inputs {
+    color: rgba(145, 145, 145, 0.614);
+    border-radius: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+    outline: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border:rgb(192, 192, 192);
+    height: 30px;
+}
+
+/* Search Bar:
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .s003 {
@@ -100,14 +204,12 @@ td {
     left: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
 
 .s003 form {
     width: 100%;
     max-width: 790px;
     margin-bottom: 0;
-    
 }
 
 .s003 form .inner-form {
@@ -121,12 +223,10 @@ td {
     align-items: center;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    
 }
 
 .s003 form .inner-form .input-field {
     height: 58px;
-    
 }
 
 .s003 form .inner-form .input-field input {
@@ -176,6 +276,7 @@ td {
 .s003 form .inner-form .input-field.third-wrap {
     width: 74px;
 }
+
 .s003 form .inner-form .input-field.third-wrap .btn-search {
     height: 100%;
     width: 100%;
@@ -188,9 +289,11 @@ td {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image: radial-gradient(rgb(243, 242, 242) 15%, rgb(233, 233, 233) 65%, rgb(217, 217, 217) 90%);
 }
+
 .s003 form .inner-form .input-field.third-wrap .btn-search svg {
     width: 16px;
 }
+
 .s003 form .inner-form .input-field.third-wrap .btn-search:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-image: radial-gradient(#6ac18d 10%, #68f690 65%, #6AFB92 90%);
@@ -201,3 +304,22 @@ td {
     transition: all .2s ease-out, color .2s ease-out;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+#deleteBTN {
+    position: relative;
+    left: 30px;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    text-shadow: 0px 1px 0px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
+.add {
+    position: relative;
+    margin-right: 800px;
+    font-style: normal;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    text-shadow: 0px 1px 0px rgb(145, 145, 145), 0 0 5px #f5f6f6, 0 0 5px rgb(217, 217, 238);
+}
+
