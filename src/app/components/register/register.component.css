@@ -116,7 +116,7 @@ input:focus {
     position: relative;
     top: 83.5%;
     border-radius: 5px;
-    box-shadow: 1px 1px;
+    nav-down: 1px 1px;
     width: 153px;
     height: 30px;
     box-sizing: border-box;

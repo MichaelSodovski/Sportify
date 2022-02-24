@@ -9,14 +9,14 @@
                     <th> Fats </th>
                 </tr>
                 <tr class="TotalTr">
-                    <td class="TotalTrStart"> {{ totalCalories }} </td>
-                    <td class="TotalTrMiddle"> {{ totalProtein }} </td>
-                    <td class="TotalTrMiddle"> {{ totalCarbohydrates }} </td>
-                    <td class="TotalTrEnd"> {{ totalFat }} </td>
+                    <td class="TotalTrStart"> {{ totalCalories  | number : '1.2-2' }} </td>
+                    <td class="TotalTrMiddle"> {{ totalProtein  | number : '1.2-2' }} </td>
+                    <td class="TotalTrMiddle"> {{ totalCarbohydrates | number : '1.2-2' }} </td>
+                    <td class="TotalTrEnd"> {{ totalFat | number : '1.2-2' }} </td> 
                 </tr>
             </table>
         </div>
-        <div id="summaryOfDailyProducts">
+        <div id="summaryOfDailyProducts" class=".col-10">
             <tr id="smallTableTr">
                 <th> Product Name </th>
                 <th> Amount (gr) </th>
@@ -28,7 +28,7 @@
                             <div id="dividerStart"></div>
                             <td> {{p.productName}} </td>
                             <div id="dividerEnd"></div>
-                            <td> {{p.amount}} </td>
+                            <td> {{p.amount | number : '1.2-2'}} </td>
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                     <button mat-button style="color:red" class="deleteBtn" (click)="ItemDelete(p.id)"> Delete </button>

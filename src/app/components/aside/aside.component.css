@@ -11,7 +11,6 @@
     background-image: radial-gradient(rgb(243, 242, 242) 15%, rgb(233, 233, 233) 65%, rgb(217, 217, 217) 90%);
     outline: 0;
 }
-
 .navBtn:hover {
     background-color: #6AFB92;
     color: white;
@@ -19,21 +18,18 @@
     background-image: radial-gradient(#96fabe 20%, #68f690 65%, #6AFB92 90%);
     outline: 0;
 }
-
 .navBtn:focus {
     background-color: #6AFB92;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-image: radial-gradient(#6ac18d 20%, #68f690 65%, #6AFB92 90%);
     outline: 0;
 }
-
 .navBtn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-
 .navBtn span:after {
     content: '\00bb';
     position: absolute;
@@ -42,11 +38,9 @@
     right: -20px;
     transition: 0.5s;
 }
-
 .navBtn:hover span {
     padding-right: 25px;
 }
-
 .navBtn:hover span:after {
     opacity: 1;
     right: 0;
