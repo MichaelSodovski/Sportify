@@ -6,6 +6,7 @@
                     <input id="search" type="text" placeholder="Enter Product Name..."
                         (change)="onTextChange($event)" />
                 </div>
+                <!-- search button: -->
                 <div class="input-field third-wrap">
                     <button class="btn-search" type="button">
                         <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas"
@@ -42,9 +43,6 @@
     <mat-accordion class="example-headers-align" *ngFor="let p of localProducts">
         <mat-expansion-panel hideToggle>
             <mat-expansion-panel-header>
-                <mat-panel-title>
-                    <td> </td>
-                </mat-panel-title>
                 <mat-panel-description (click)="getProductID(p.productId)">
                     <td> {{p.productName| titlecase }} </td>
                     <td> {{p.calories | number:''}} </td>

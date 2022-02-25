@@ -1,39 +1,37 @@
-<div id="homeMain">
-    <div id="flex-container-wrap">
-        <div id="summaryStatsTable">
-            <table>
-                <tr>
-                    <th> Calories </th>
-                    <th> Proteins </th>
-                    <th> Carbs </th>
-                    <th> Fats </th>
-                </tr>
-                <tr class="TotalTr">
-                    <td class="TotalTrStart"> {{ totalCalories  | number : '1.2-2' }} </td>
-                    <td class="TotalTrMiddle"> {{ totalProtein  | number : '1.2-2' }} </td>
-                    <td class="TotalTrMiddle"> {{ totalCarbohydrates | number : '1.2-2' }} </td>
-                    <td class="TotalTrEnd"> {{ totalFat | number : '1.2-2' }} </td> 
-                </tr>
-            </table>
-        </div>
-        <div id="summaryOfDailyProducts" class=".col-10">
+<div class="flex-container" id="homeMain">
+    <table id="summaryStatsTable">
+        <tr>
+            <th> Calories </th>
+            <th> Proteins </th>
+            <th> Carbs </th>
+            <th> Fats </th>
+        </tr>
+        <tr class="TotalTr">
+            <td class="TotalTrStart"> {{ totalCalories | number : '1.2-2' }} </td>
+            <td class="TotalTrMiddle"> {{ totalProtein | number : '1.2-2' }} </td>
+            <td class="TotalTrMiddle"> {{ totalCarbohydrates | number : '1.2-2' }} </td>
+            <td class="TotalTrEnd"> {{ totalFat | number : '1.2-2' }} </td>
+        </tr>
+    </table>
+    <div  id="summaryOfDailyProducts">
+        <table>
             <tr id="smallTableTr">
                 <th> Product Name </th>
                 <th> Amount (gr) </th>
             </tr>
-            <mat-accordion class="example-headers-align" *ngFor="let p of selectedProducts">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-description>
-                            <div id="dividerStart"></div>
-                            <td> {{p.productName}} </td>
-                            <div id="dividerEnd"></div>
-                            <td> {{p.amount | number : '1.2-2'}} </td>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <button mat-button style="color:red" class="deleteBtn" (click)="ItemDelete(p.id)"> Delete </button>
-                </mat-expansion-panel>
-            </mat-accordion>
-        </div>
+        </table>
+        <mat-accordion class="example-headers-align" *ngFor="let p of selectedProducts">
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-description>
+                        <div id="dividerStart"></div>
+                        <td> {{p.productName}} </td>
+                        <div id="dividerEnd"></div>
+                        <td> {{p.amount | number : '1.2-2'}} </td>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <button mat-button style="color:red" class="deleteBtn" (click)="ItemDelete(p.id)"> Delete </button>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
 </div>

@@ -23,7 +23,7 @@ td {
 .flex-tr {
     display: flex;
     flex-direction: row;
-    vertical-align: middle;
+    vertical-align:middle;
     height: 50px;
     color: rgba(27, 27, 27, 0.614);
     font-size: medium;
@@ -49,35 +49,35 @@ td {
     display: inline-block;
     white-space: nowrap;
     position: relative;
-    left: 330px;
+    right: 50px;
 }
 
 #tableCaloriesTD {
     position: relative;
     width: 110px;
     height: 50px;
-    left: 390px;
+    left: 160px;
 }
 
 #tableProteinTD {
     position: relative;
     width: 110px;
     height: 50px;
-    left: 455px;
+    left: 380px;
 }
 
 #tableCarbohydrateTD {
     position: relative;
     width: 110px;
     height: 50px;
-    left: 523px;
+    left: 595px;
 }
 
 #tableFatTD {
     position: relative;
     width: 110px;
     height: 50px;
-    left: 593px;
+    left: 814px;
 }
 
 /* Responsive Add Item Menu:
@@ -187,7 +187,7 @@ td {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .s003 {
-    position: relative;
+    
     min-height: -30vh;
     display: -ms-flexbox;
     display: flex;
@@ -201,9 +201,6 @@ td {
     background-position: center center;
     padding: 10px;
     width: 504px;
-    left: 350px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .s003 form {
