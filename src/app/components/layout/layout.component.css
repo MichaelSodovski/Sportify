@@ -1,18 +1,19 @@
-div {
+/* div {
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: repeat(12, 1fr);
     background-color: white;
-}
-div, div > * {
+} */
+/* div, div > * {
     border: 0.01px lightgrey solid;
     border-bottom: none;
-}
+} */
 header {
     grid-column: span 12;
     background-image: radial-gradient(#55db7b 10%, #68f690 30%, #6AFB92);
     box-shadow: 3px 3px 3px grey;
+    height: 60px;
 }
 main {
     grid-column: span 10;
